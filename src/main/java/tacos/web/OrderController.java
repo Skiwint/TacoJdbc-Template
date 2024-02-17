@@ -13,7 +13,7 @@ import org.springframework.web.bind.support.SessionStatus;
 
 import lombok.extern.slf4j.Slf4j;
 import tacos.TacoOrder;
-import tacos.data.JdbcOrderRepository;
+import tacos.data.OrderRepository;
 
 @Slf4j
 @Controller
@@ -21,9 +21,9 @@ import tacos.data.JdbcOrderRepository;
 @SessionAttributes("tacoOrder")
 public class OrderController {
 
-  private final JdbcOrderRepository orderRepo;
+  private final OrderRepository orderRepo;
 
-  public OrderController(JdbcOrderRepository orderRepo) {
+  public OrderController(OrderRepository orderRepo) {
     this.orderRepo = orderRepo;
   }
 
